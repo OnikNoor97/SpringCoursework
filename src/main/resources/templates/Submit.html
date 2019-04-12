@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h1> Employee submission result </h1>
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Salary</th>
+    </thead>
+    <tbody>
+    <tr th:each="employee : ${empl}">
+        <td th:text="${employee.name}"></td>
+        <td th:text="${employee.salary}" ></td>
+    </tr>
+    </tbody>
+</table>
+    <p>The mean of the salaries are: <span th:text="${mean}"></span></p>
+<span th:text="${compare}"></span>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Coursework</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h1>Employee Form SQL</h1>
+
+<form th:action="@{/sqlSubmit}" method="post">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" name="sqlName" required="true"/></td>
+        </tr>
+        <tr>
+            <td>Salary:</td>
+            <td><input type="number"  step = "0.01" name="sqlSalary" required="true" /></td>
+        </tr>
+        <tr>
+            <td><button name="submit" type="submit">Submit</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
